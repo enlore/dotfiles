@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins
+"
 call plug#begin()
   " util
   Plug 'tpope/vim-sensible'
@@ -28,14 +31,15 @@ call plug#begin()
   Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 call plug#end()
 
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocomplete config
 "
 "let g:coq_settings = { 'auto_start': v:true } " use this line to debug
 let g:coq_settings = { 'auto_start': 'shut-up' }
 
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lualine and native status line related things
+"
 "
 " don't show the search count in the native status line
 set shortmess=S
@@ -48,6 +52,7 @@ require('lualine').setup {
 }
 END
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTAX ENGINE BUG
 " - broken vim script highlighting when using lua heredocs
 " - used curl command below to revert lua syntax file to an older version that
@@ -56,23 +61,23 @@ END
 "
 " !curl -sS https://raw.githubusercontent.com/neovim/neovim/v0.7.2/runtime/syntax/lua.vim > $VIMRUNTIME/syntax/lua.vim
 
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " auto close brackets
 "
 lua << EOF
 require("nvim-autopairs").setup {}
 EOF
 
-let mapleader=","
-
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colors
 "
 set background=dark
 set termguicolors
 colorscheme deus
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " formatting
+"
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -86,8 +91,11 @@ set cursorcolumn
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-" handy mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" handy mappings and settings tweaks
 "
+let mapleader=","
+
 " Use ctrl-[hjkl] to select the active pane
 nmap <silent> <c-k> <c-w><c-k>
 nmap <silent> <c-j> <c-w><c-j>
