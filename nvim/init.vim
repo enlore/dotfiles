@@ -4,6 +4,7 @@ call plug#begin()
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/vim-easy-align'
+  Plug 'windwp/nvim-autopairs'
 
   " dx
   Plug 'nvim-lualine/lualine.nvim'
@@ -54,6 +55,13 @@ END
 " - until this issue solved: https://github.com/neovim/neovim/issues/20456
 "
 " !curl -sS https://raw.githubusercontent.com/neovim/neovim/v0.7.2/runtime/syntax/lua.vim > $VIMRUNTIME/syntax/lua.vim
+
+"
+" auto close brackets
+"
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
 
 let mapleader=","
 
