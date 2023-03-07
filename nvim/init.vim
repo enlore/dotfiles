@@ -8,6 +8,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/vim-easy-align'
   Plug 'windwp/nvim-autopairs'
+  Plug 'tommcdo/vim-exchange'
 
   " dx
   Plug 'nvim-lualine/lualine.nvim'
