@@ -67,6 +67,8 @@ set relativenumber
 set colorcolumn=80
 set cursorcolumn
 set nowrap
+" trying this out, may need for coc
+set signcolumn=yes
 
 " loudly highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
